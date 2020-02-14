@@ -1,0 +1,2279 @@
+{
+	"info": {
+		"_postman_id": "e5b10fd8-8b1f-4150-bf05-d8ad7f7e668c",
+		"name": "HC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Admin",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n      disabled\n      allowEmbedIframes\n      deleted\n      termsAndConditionsAgreedAt\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "User (ID!) abrufen"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User User",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n  User (id: \"u3\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n      disabled\n      allowEmbedIframes\n      deleted\n      termsAndConditionsAgreedAt\n      \n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "Admin ruft einen User auf"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "statistics",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "  query {\n    statistics {\n      countUsers\n      countPosts\n      countComments\n      countNotifications\n      countInvites\n      countFollows\n      countShouts\n    }\n  }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n        reports(orderBy: createdAt_desc) {\n          id\n          createdAt\n          updatedAt\n          closed\n          resource {\n            __typename\n            ... on User {\n              id\n            }\n            ... on Post {\n              id\n            }\n            ... on Comment {\n              id\n            }\n          }\n          filed {\n            submitter {\n              id\n            }\n            createdAt\n            reasonCategory\n            reasonDescription\n          }\n        }\n      }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Donations",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "  query {\n    Donations {\n      id\n      goal\n      progress\n    }\n  }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "contributions per slug",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "    query {\n              User(slug:\"peter-lustig\") {\n                  contributions {\n                      title\n                      slug\n                      content\n                      contentExcerpt\n                      createdAt\n                  }\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "User(slug:\"peter-lustig\") {\n                  contributions"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > contributions per slug",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "      query {\n              User(slug:\"peter-lustig\") {\n                  actorId\n                  contributions {\n                      id\n                      activityId\n                      objectId\n                      title\n                      slug\n                      content\n                      contentExcerpt\n                      createdAt\n                      author {\n                          slug\n                      }\n                  }\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > following + followingCount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "    query {\n              User(slug:\"peter-lustig\") {\n                  following {\n                      slug\n                  }\n                  followingCount\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "    User(slug:\"peter-lustig\") {\n                  following {"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > followingCount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "   query {\n              User(slug:\"peter-lustig\") {\n                  followingCount\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "followingCount"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > followedBy + followedByCount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "    query {\n              User(slug:\"peter-lustig\") {\n                  followedBy {\n                      slug\n                  }\n                  followedByCount\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "     User(slug:\"${slug}\") {\n                  followedBy {\n                      slug\n                  }\n                  followedByCount"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > followedByCount",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "    query {\n              User(slug:\"peter-lustig\") {\n                    followedByCount\n              }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > followedByCurrentUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "  query {\n            User(id: \"u2\") {\n              id\n              isMuted\n              followedByCurrentUser\n            }\n          }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "   User(id: \"u2\") {\n              id\n              isMuted\n              followedByCurrentUser\n            }"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "mutation > UserDelete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL2Vkb2JlbmUvMTI4LmpwZyIsImlkIjoidTEiLCJlbWFpbCI6ImFkbWluQGV4YW1wbGUub3JnIiwic2x1ZyI6InBldGVyLWx1c3RpZyIsImlhdCI6MTU4MTY2NzIwMSwiZXhwIjoxNTgxNzUzNjAxLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjMwMDAiLCJpc3MiOiJodHRwOi8vYmFja2VuZDo0MDAwIiwic3ViIjoidTEifQ.vQdFaNCCU145ykCSWQsHHWjzQipW6QesPBC2oReWwts"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "  mutation  {\n      DeleteUser(id: \"u3\", resource: [Post, Comment]) {\n        id\n        name\n        slug\n        about\n        deleted\n        contributions {\n          id\n          content\n          contentExcerpt\n          deleted\n          comments {\n            id\n            content\n            contentExcerpt\n            deleted\n          }\n        }\n        comments {\n          id\n          content\n          contentExcerpt\n          deleted\n        }\n      }\n    }",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:4000"
+			},
+			"response": []
+		},
+		{
+			"name": "mutedUsers",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": " query {\n        mutedUsers {\n          id\n          name\n          isMuted\n        }\n      }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "mutation  > muteUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": " \n       mutation  {\n          muteUser(id: \"u4\") {\n            id\n            name\n            isMuted\n          }\n        }\n      ",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "mutation > unmuteUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": " mutation  {\n          unmuteUser(id: \"u4\") {\n            id\n            name\n            isMuted\n          }\n        }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Post > orderBy: createdAt_asc",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "      query {\n              Post(orderBy: createdAt_asc) {\n                id\n                title\n                author {\n                  id\n                  name\n                }\n              }\n            }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query {\n  User (id: \"u1\"){\n      id\n      email\n      name\n      slug\n      avatar\n      coverImg\n      role\n      locationName\n      about\n      createdAt\n      updatedAt\n  }\n}",
+								"variables": ""
+							}
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Post > shoutedBy ",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7721c13d-6c35-461b-825c-cb8d87047b68",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "38475f42-f1a4-4d63-82e1-71eaf17c3369",
+						"exec": [
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": {
+						"in": "header",
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJuYW1lIjoiUGV0ZXIgTHVzdGlnIiwiZGlzYWJsZWQiOmZhbHNlLCJhdmF0YXIiOiJodHRwczovL3MzLmFtYXpvbmF3cy5jb20vdWlmYWNlcy9mYWNlcy90d2l0dGVyL21hc3Rlcm1pbmRlc2lnbi8xMjguanBnIiwiaWQiOiJ1MSIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJzbHVnIjoicGV0ZXItbHVzdGlnIiwiaWF0IjoxNTgxNDkxMjYwLCJleHAiOjE1ODE1Nzc2NjAsImF1ZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MzAwMCIsImlzcyI6Imh0dHA6Ly9iYWNrZW5kOjQwMDAiLCJzdWIiOiJ1MSJ9.uJZX2-0hMc2zyI23nfDdtk7qTuulmhSu9t6CarTuyBQ"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": " query {\n      Post(id: \"p1\") {\n        shoutedBy {\n          slug\n        }\n      }\n    }",
+						"variables": ""
+					}
+				},
+				"url": "localhost:4000",
+				"description": "shoutedBy slug"
+			},
+			"response": [
+				{
+					"name": "user (ID!)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "graphql"
+						},
+						"url": "localhost:4000"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "517"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"205-nYFTrWyS8wMMu4Q46L+gRAH784g\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 12 Feb 2020 10:10:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"User\": [\n            {\n                \"id\": \"u1\",\n                \"email\": \"admin@example.org\",\n                \"name\": \"Peter Lustig\",\n                \"slug\": \"peter-lustig\",\n                \"avatar\": \"https://s3.amazonaws.com/uifaces/faces/twitter/mastermindesign/128.jpg\",\n                \"coverImg\": null,\n                \"role\": \"admin\",\n                \"locationName\": null,\n                \"about\": \"Consectetur repellendus omnis unde aut voluptatum distinctio. Occaecati modi molestiae suscipit tenetur. Cum maiores nihil eos eveniet omnis amet neque. Iusto itaque et voluptatem fuga magni.\",\n                \"createdAt\": \"2020-02-12T07:07:31.729Z\",\n                \"updatedAt\": \"2020-02-12T07:09:58.496Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "User > Login > Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "   mutation  {\n                login(email: \"admin@example.org\", password: \"1234\")\n              }",
+						"variables": ""
+					}
+				},
+				"url": "http://localhost:4000"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
